@@ -1,13 +1,9 @@
 {
-    "builds": [{
-        "src": "worklingo/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.14" }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "worklingo/wsgi.py"
-        }
-    ]
+  "version": 3,
+  "builds": [
+    { "src": "worklingo/wsgi.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "worklingo/wsgi.py" }
+  ]
 }
